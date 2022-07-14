@@ -1,6 +1,6 @@
-button = document.querySelector('#add');
+addtodo = document.querySelector('#add');
 
-button.addEventListener("click", () => {
+addtodo.addEventListener("click", () => {
     title = document.querySelector("#title").value;
     content = document.querySelector("#content").value;
     additem(title, content)
@@ -17,7 +17,7 @@ function additem(title, content)
     let h3 = clone.querySelector("h3");
     let p = clone.querySelector("p");
 
-    h3.textContent =title;
+    h3.textContent = title;
     p.textContent = content;
     todo.appendChild(clone);
 }
@@ -31,10 +31,10 @@ function addToLocalStorage(title, content)
     }
     // console.log(todo);
     // console.log(JSON.stringify(todo));
-    localStorage.setItem(localStorage.length+1, JSON.stringify(todo));
+    localStorage.setItem(localStorage.length, JSON.stringify(todo));
 }
 
-function addLocalLists()
+function addLocalTodos()
 {
 
     Object.values(localStorage).forEach(item => {

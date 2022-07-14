@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
 </head>
-<body onload="addLocalLists()">
+<body onload="addLocalTodos()">
     <h1>Todo list</h1>
-
 
     <template>
         <h3></h3>
@@ -22,11 +21,12 @@
 
     
     <form>
-        <label>Title:</label>
+        <label for="title">Title:</label>
         <input type="text" name="title" id="title">
 
-        <label>Description:</label>
-        <input type = "text" name="content" id="content">
+        <label for="content">Description:</label>
+        <input type="text" name="content" id="content">
+
         <button id="add" type="button">Add</button>
         <button onclick="deleteall()">Delete All</button>
     </form>
